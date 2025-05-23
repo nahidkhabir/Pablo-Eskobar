@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-[#fefefe] text-[#222222]">
+  <!-- Navbar -->
+  <header class="bg-white shadow fixed w-full z-10">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <div class="text-xl font-bold">My Portfolio</div>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#gallery" class="hover:text-blue-500">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen relative pt-20">
+    <img src="https://source.unsplash.com/1600x900/?technology,code" class="absolute inset-0 w-full h-full object-cover" alt="Background" />
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+      <div class="text-center text-white px-6" data-aos="fade-up">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Pablo Eskobar World</h1>
+        <p class="text-xl">Humble Man and Game Maker</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-6">About Me</h2>
+      <p class="text-lg leading-relaxed">
+        Welcome to my world. If you're here, you’re either inspired or intrigued. Either way, you're paying attention — and that’s the power of attitude.
+        I don’t follow trends I set them.<br /><br />
+        Driven by confidence, fueled by ambition, and guided by purpose, I believe in making statements without saying a word.
+        I walk with purpose, speak with clarity, and act with conviction. Life doesn’t wait, and neither do I.
+        I don’t chase approval; I own my choices. Respect is earned, not given — and I make sure I earn it every day.<br /><br />
+        This isn’t arrogance. It’s self-respect.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-20 bg-gray-50" data-aos="fade-up">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-3xl font-bold mb-6">Gallery</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <img src="/images/gallery1.jpg" class="w-full h-48 object-cover" alt="Gallery Image 1" />
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <img src="/images/gallery2.jpg" class="w-full h-48 object-cover" alt="Gallery Image 2" />
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <img src="/images/gallery3.jpg" class="w-full h-48 object-cover" alt="Gallery Image 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+      <form class="grid grid-cols-1 gap-6 mb-6" action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" class="p-3 border rounded" required />
+        <input type="email" name="email" placeholder="Your Email" class="p-3 border rounded" required />
+        <textarea name="message" placeholder="Your Message" rows="5" class="p-3 border rounded" required></textarea>
+        <button type="submit" class="bg-blue-600 text-white p-3 rounded hover:bg-blue-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    &copy; 2025 My Portfolio. All rights reserved.
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    lucide.createIcons();
+  </script>
+</body>
+</html>
